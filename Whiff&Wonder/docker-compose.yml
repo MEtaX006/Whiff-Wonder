@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.txt
+    ports:
+      - "3000:3000" # Ensure port 3000 is mapped for external access
+    volumes:
+      - .:/app:delegated
+      - /app/node_modules
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=your_redis_password
+    depends_on:
+      - redis
+    restart: always
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--requirepass", "your_redis_password"]
+    restart: always
