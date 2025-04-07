@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Golden Bliss",
+        "image": "References/P1.jpg",
+        "accords": ["Vanilla", "Amber", "Woody"],
+        "rating": "4.2/5",
+        "notes": {
+            "top": ["Bergamot", "Lavender"],
+            "heart": ["Vanilla", "Jasmine"],
+            "base": ["Amber", "Musk"]
+        }
+    },
+    {
+        "name": "Rose Elegance",
+        "image": "References/P2.jpg",
+        "accords": ["Floral", "Fresh", "Citrus"],
+        "rating": "4.8/5",
+        "notes": {
+            "top": ["Rose", "Lemon"],
+            "heart": ["Jasmine", "Peony"],
+            "base": ["Musk", "Sandalwood"]
+        }
+    },
+    {
+        "name": "Amber Mystique",
+        "image": "References/P3.jpg",
+        "accords": ["Amber", "Spicy", "Woody"],
+        "rating": "4.5/5",
+        "notes": {
+            "top": ["Bergamot", "Cardamom"],
+            "heart": ["Amber", "Patchouli"],
+            "base": ["Cedarwood", "Vanilla"]
+        }
+    }
+]
