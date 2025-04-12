@@ -2,8 +2,8 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Add build essentials for bcrypt
-RUN apk add --no-cache python3 make g++
+# Add build essentials for bcrypt and health check dependencies
+RUN apk add --no-cache python3 make g++ wget
 
 # Copy package files
 COPY package*.json ./

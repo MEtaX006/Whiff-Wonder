@@ -28,16 +28,24 @@
         <div class="login-container">
             <form class="login-form" id="registerForm">
                 <div class="form-group">
-                    <label for="username" data-translate="name">Name:</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="username">Choose a Username:</label>
+                    <input type="text" id="username" name="username" required 
+                           placeholder="Enter desired username"
+                           pattern="[a-zA-Z0-9_-]{3,20}"
+                           title="Username must be 3-20 characters long and can contain letters, numbers, underscores, and hyphens">
+                    <small class="form-text">3-20 characters, letters, numbers, and _ - only</small>
                 </div>
                 <div class="form-group">
-                    <label for="password" data-translate="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+                    <label for="password">Create Password:</label>
+                    <input type="password" id="password" name="password" required 
+                           placeholder="Create a strong password"
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                           title="Password must be at least 8 characters long and include both letters and numbers">
+                    <small class="form-text">Minimum 8 characters, at least one letter and one number</small>
                 </div>
-                <button type="submit" class="login-button" data-translate="register">Register</button>
-                <p class="login-link" data-translate="alreadyHaveAccount">
-                    Already have an account? <a href="login.html" data-translate="loginHere">Login here</a>
+                <button type="submit" class="login-button">Create Account</button>
+                <p class="login-link">
+                    Already part of Whiff & Wonder? <a href="login.html">Sign in here</a>
                 </p>
                 <div class="message" id="registerMessage"></div>
             </form>
