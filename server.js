@@ -6,6 +6,13 @@ const session = require('express-session');
 const RedisStore = require('connect-redis').default;
 const app = express();
 
+// Add CORS headers
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
+
 // Log to verify module loading
 console.log('Modules loaded successfully');
 
@@ -27,6 +34,9 @@ redisIoRedis.ping((err, result) => {
         console.log('Redis connection successful:', result);
     }
 });
+
+// Add review schema to Redis
+const reviewKey = (productId) => `reviews:${productId}`;
 
 // Add static file serving
 app.use(express.static(path.join(__dirname, '.'))); // Serve static files from the root directory
@@ -157,6 +167,67 @@ app.get('/api/profile', async (req, res) => {
     } catch (error) {
         console.error('Error fetching profile:', error);
         res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Product details endpoint
+app.get('/api/products/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const items = require('./items.json');
+    // Fix image paths to be absolute
+    const product = JSON.parse(JSON.stringify(items[id - 1])); // Create a copy
+    if (!product) {
+        return res.status(404).json({ error: 'Product not found' });
+    }
+    product.image = `/${product.image}`;
+    res.json(product);
+});
+
+// Get all products endpoint
+app.get('/api/products', (req, res) => {
+    const items = require('./items.json');
+    // Fix image paths to be absolute
+    const products = items.map(item => {
+        const product = { ...item };
+        product.image = `/${product.image}`;
+        return product;
+    });
+    res.json(products);
+});
+
+// Review endpoints
+app.post('/api/reviews/:productId', async (req, res) => {
+    try {
+        if (!req.session.username) {
+            return res.status(401).json({ error: 'Must be logged in to post reviews' });
+        }
+
+        const { rating, comment } = req.body;
+        const productId = req.params.productId;
+        const username = req.session.username;
+        const review = {
+            username,
+            rating,
+            comment,
+            date: new Date().toISOString()
+        };
+
+        await redisIoRedis.lpush(reviewKey(productId), JSON.stringify(review));
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Error posting review:', error);
+        res.status(500).json({ error: 'Failed to post review' });
+    }
+});
+
+app.get('/api/reviews/:productId', async (req, res) => {
+    try {
+        const productId = req.params.productId;
+        const reviews = await redisIoRedis.lrange(reviewKey(productId), 0, -1);
+        res.json(reviews.map(review => JSON.parse(review)));
+    } catch (error) {
+        console.error('Error fetching reviews:', error);
+        res.status(500).json({ error: 'Failed to fetch reviews' });
     }
 });
 

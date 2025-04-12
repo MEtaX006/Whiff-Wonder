@@ -19,6 +19,7 @@ FILES=(
     "contact.html"
     "collection.html"
     "about.html"
+    "product-details.html"
 )
 
 # Loop through each file and copy it to the container

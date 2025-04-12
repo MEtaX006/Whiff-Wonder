@@ -12,7 +12,7 @@ if errorlevel 1 (
 )
 
 :: List of files to copy
-set "files=styles.css server.js auth-check.js translations.js language-toggle.js items.json items-loader.js login.html register.html profile.html landing.html contact.html collection.html about.html package.json"
+set "files=styles.css server.js auth-check.js translations.js language-toggle.js items.json items-loader.js login.html register.html profile.html landing.html contact.html collection.html about.html product-details.html package.json"
 
 :: Copy main files
 for %%f in (%files%) do (

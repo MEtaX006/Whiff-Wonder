@@ -11,8 +11,21 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy app files
-COPY . .
+# Copy all HTML files
+COPY *.html ./
+
+# Copy all JavaScript files
+COPY *.js ./
+
+# Copy CSS files
+COPY *.css ./
+
+# Copy JSON files
+COPY *.json ./
+
+# Create and copy References directory
+RUN mkdir -p References
+COPY References/*.* References/
 
 # Expose port
 EXPOSE 3000

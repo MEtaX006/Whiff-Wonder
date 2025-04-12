@@ -2,7 +2,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('productContainer');
 
     try {
-        const response = await fetch('items.json');
+        const response = await fetch('http://localhost:3000/api/products');
+        if (!response.ok) {
+            throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+        }
+        
         const items = await response.json();
 
         items.forEach(item => {
@@ -27,12 +31,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <p><strong data-translate="baseNotes">Base Notes:</strong> ${item.notes.base.join(', ')}</p>
                     </div>
                 </div>
-                <button data-translate="fullReview">Full Review</button>
+                <button onclick="window.location.href='product-details.html?id=${item.id}'" data-translate="fullReview">Full Review</button>
             `;
 
             container.appendChild(productDiv);
         });
     } catch (error) {
         console.error('Error loading items:', error);
+        container.innerHTML = '<div style="text-align: center; padding: 2rem;"><h2>Error loading products</h2><p>Please try again later</p></div>';
     }
 });

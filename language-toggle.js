@@ -18,7 +18,8 @@ function toggleLanguage() {
 function updateLanguageButton(currentLang) {
     const button = document.querySelector('.lang-toggle');
     if (button) {
-        button.textContent = currentLang === 'en' ? 'RO' : 'EN';
+        // Show the current language
+        button.textContent = currentLang.toUpperCase();
     }
 }
 

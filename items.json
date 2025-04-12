@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Golden Bliss",
         "image": "References/P1.jpg",
         "accords": ["Vanilla", "Amber", "Woody"],
@@ -8,9 +9,17 @@
             "top": ["Bergamot", "Lavender"],
             "heart": ["Vanilla", "Jasmine"],
             "base": ["Amber", "Musk"]
-        }
+        },
+        "description": "A luxurious blend of sweet vanilla and warm amber, wrapped in woody undertones. This captivating fragrance opens with fresh bergamot and calming lavender, leading to a heart of rich vanilla and delicate jasmine. The base notes of amber and musk create a lasting, sophisticated trail.",
+        "price": 120,
+        "size": "100ml",
+        "concentration": "Eau de Parfum",
+        "yearReleased": 2022,
+        "sillage": "Moderate to Strong",
+        "longevity": "8-10 hours"
     },
     {
+        "id": 2,
         "name": "Rose Elegance",
         "image": "References/P2.jpg",
         "accords": ["Floral", "Fresh", "Citrus"],
@@ -19,9 +28,17 @@
             "top": ["Rose", "Lemon"],
             "heart": ["Jasmine", "Peony"],
             "base": ["Musk", "Sandalwood"]
-        }
+        },
+        "description": "An enchanting floral masterpiece centered around the queen of flowers - the rose. Opening with fresh lemon zest and delicate rose petals, it evolves into a heart of jasmine and peony. The base of musk and sandalwood provides a sophisticated, long-lasting finish.",
+        "price": 145,
+        "size": "75ml",
+        "concentration": "Eau de Parfum",
+        "yearReleased": 2023,
+        "sillage": "Moderate",
+        "longevity": "6-8 hours"
     },
     {
+        "id": 3,
         "name": "Amber Mystique",
         "image": "References/P3.jpg",
         "accords": ["Amber", "Spicy", "Woody"],
@@ -30,6 +47,13 @@
             "top": ["Bergamot", "Cardamom"],
             "heart": ["Amber", "Patchouli"],
             "base": ["Cedarwood", "Vanilla"]
-        }
+        },
+        "description": "A mysterious and sensual fragrance that combines warm amber with exotic spices. The fresh bergamot and cardamom opening leads to a rich heart of amber and patchouli. The base of cedarwood and vanilla creates an unforgettable, warming trail.",
+        "price": 135,
+        "size": "90ml",
+        "concentration": "Eau de Parfum",
+        "yearReleased": 2023,
+        "sillage": "Strong",
+        "longevity": "10-12 hours"
     }
 ]
