@@ -3,6 +3,8 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -16,12 +18,14 @@ body {
     color: #333;
     overflow-x: hidden;
     position: relative;
-    user-select: none; /* Prevent text selection */
-    -webkit-user-select: none; /* For Safari */
-    -moz-user-select: none; /* For Firefox */
-    -ms-user-select: none; /* For older IE */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     max-width: 100%;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 body::before {
@@ -35,7 +39,27 @@ body::before {
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     z-index: -1;
+    pointer-events: none;
     background-attachment: scroll;
+}
+
+main {
+    flex: 1 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.95);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    z-index: 2;
+    bottom: 0;
+    margin-top: auto;
 }
 
 nav {
@@ -337,8 +361,9 @@ h1:hover, h2:hover {
     flex-wrap: wrap;
     justify-content: center;
     padding: 3rem;
-    gap: 2rem;
+    gap: 2.5rem; /* Increased gap between products */
     margin-bottom: 3rem;
+    min-height: calc(100vh - 400px);
 }
 
 .product {
@@ -347,11 +372,13 @@ h1:hover, h2:hover {
     padding: 2rem;
     background: linear-gradient(145deg, #fff, rgba(196, 138, 90, 0.1));
     width: 300px;
+    max-width: 300px; /* Ensure consistent card width */
+    margin: 0 auto; /* Center cards in grid */
     text-align: center;
     box-shadow: 0 10px 30px rgba(196, 138, 90, 0.15);
     backdrop-filter: blur(5px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 400px; /* Reduced from 600px since we're removing notes */
+    min-height: 400px; /* Adjusted to accommodate fixed image size */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -377,12 +404,14 @@ h1:hover, h2:hover {
 
 .product h3 {
     font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-family: 'Playfair Display', serif;
-    user-select: none; /* Prevent text selection */
-    -webkit-user-select: none; /* For Safari */
-    -moz-user-select: none; /* For Firefox */
-    -ms-user-select: none; /* For older IE */
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 1rem;
+    line-height: 1.3;
+    user-select: none;
 }
 
 .product p {
@@ -422,17 +451,6 @@ h1:hover, h2:hover {
 }
 
 /* Removed notes-related styles */
-footer {
-    background-color: rgba(51, 51, 51, 0.95);
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    margin-top: auto;
-}
-
 footer p {
     margin: 0;
     font-size: 1rem;
@@ -637,6 +655,17 @@ footer p {
     -ms-user-select: none; /* For older IE */
 }
 
+.note-tag {
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    color: #666;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(196, 138, 90, 0.2);
+    word-spacing: 0.2em; /* Add space between words */
+    letter-spacing: 0.05em; /* Add slight letter spacing */
+}
+
 .rating {
     margin: 1rem 0;
     font-size: 1.2rem;
@@ -678,7 +707,7 @@ footer p {
     padding: 2rem 2rem 2rem calc(250px + 2rem);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem; /* Increased gap between products */
     position: relative;
 }
 
@@ -1175,6 +1204,10 @@ button, a {
         font-size: 1rem; /* Adjust button font size */
         padding: 0.8rem; /* Reduce padding */
     }
+
+    .product-image img {
+        max-width: 100%;
+    }
 }
 
 /* Profile Page Styles */
@@ -1307,10 +1340,23 @@ button, a {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-    .product-image img {
-        max-width: 100%;
-    }
+.product-details-grid .product-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-details-grid h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.3;
 }
 
 .notes-and-accords {
@@ -1438,6 +1484,12 @@ button, a {
 
     .product-specs {
         grid-template-columns: 1fr;
+    }
+
+    .product-details-grid .product-image img {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
     }
 }
 

@@ -40,8 +40,11 @@ const reviewKey = (productId) => `reviews:${productId}`;
 
 // Add static file serving
 app.use(express.static(path.join(__dirname, '.'))); // Serve static files from the root directory
+app.use('/References', express.static(path.join(__dirname, 'References'))); // Explicitly serve the References directory
+
 // Log to verify static file path
 console.log('Static files served from:', path.join(__dirname, '.'));
+console.log('References served from:', path.join(__dirname, 'References'));
 
 app.use(express.json());
 

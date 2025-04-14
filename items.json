@@ -1,59 +1,173 @@
 [
     {
         "id": 1,
-        "name": "Golden Bliss",
-        "image": "References/P1.jpg",
-        "accords": ["Vanilla", "Amber", "Woody"],
-        "rating": "4.2/5",
+        "name": "Torino21",
+        "image": "References/Torino 21.jpg",
+        "accords": ["Aromatic", "Fresh Spicy", "Green", "Citrus"],
+        "rating": "4.5/5",
         "notes": {
-            "top": ["Bergamot", "Lavender"],
-            "heart": ["Vanilla", "Jasmine"],
-            "base": ["Amber", "Musk"]
+            "top": ["Mint", "Lemon", "Basil", "Thyme"],
+            "heart": ["Black Currant", "Rosemary", "Lavender", "Jasmine"],
+            "base": ["Musk", "Vervain"]
         },
-        "description": "A luxurious blend of sweet vanilla and warm amber, wrapped in woody undertones. This captivating fragrance opens with fresh bergamot and calming lavender, leading to a heart of rich vanilla and delicate jasmine. The base notes of amber and musk create a lasting, sophisticated trail.",
-        "price": 120,
+        "description": "A fresh and aromatic fragrance that opens with invigorating mint and citrus notes, complemented by herbal undertones. The heart reveals a unique blend of black currant and floral notes, settling into a musky base with vervain.",
+        "price": 135,
         "size": "100ml",
         "concentration": "Eau de Parfum",
-        "yearReleased": 2022,
-        "sillage": "Moderate to Strong",
-        "longevity": "8-10 hours"
-    },
-    {
-        "id": 2,
-        "name": "Rose Elegance",
-        "image": "References/P2.jpg",
-        "accords": ["Floral", "Fresh", "Citrus"],
-        "rating": "4.8/5",
-        "notes": {
-            "top": ["Rose", "Lemon"],
-            "heart": ["Jasmine", "Peony"],
-            "base": ["Musk", "Sandalwood"]
-        },
-        "description": "An enchanting floral masterpiece centered around the queen of flowers - the rose. Opening with fresh lemon zest and delicate rose petals, it evolves into a heart of jasmine and peony. The base of musk and sandalwood provides a sophisticated, long-lasting finish.",
-        "price": 145,
-        "size": "75ml",
-        "concentration": "Eau de Parfum",
-        "yearReleased": 2023,
+        "yearReleased": 2021,
         "sillage": "Moderate",
         "longevity": "6-8 hours"
     },
     {
-        "id": 3,
-        "name": "Amber Mystique",
-        "image": "References/P3.jpg",
-        "accords": ["Amber", "Spicy", "Woody"],
-        "rating": "4.5/5",
+        "id": 2,
+        "name": "Tom Ford Mandarino di Amalfi",
+        "image": "References/Mandarino di Amalfi.jpg",
+        "accords": ["Citrus", "Aromatic", "Fresh Spicy", "White Floral", "Green", "Musky", "Soft Spicy"],
+        "rating": "4.7/5",
         "notes": {
-            "top": ["Bergamot", "Cardamom"],
-            "heart": ["Amber", "Patchouli"],
-            "base": ["Cedarwood", "Vanilla"]
+            "top": ["Lemon", "Grapefruit", "Mint", "Basil", "Tarragon", "Black Currant"],
+            "heart": ["Orange Blossom", "Jasmine", "Clary Sage", "Shiso", "Coriander", "Black Pepper"],
+            "base": ["Musk", "Vetiver", "Amber", "Labdanum", "Civet"]
         },
-        "description": "A mysterious and sensual fragrance that combines warm amber with exotic spices. The fresh bergamot and cardamom opening leads to a rich heart of amber and patchouli. The base of cedarwood and vanilla creates an unforgettable, warming trail.",
-        "price": 135,
-        "size": "90ml",
+        "description": "A sophisticated blend of Mediterranean citrus and aromatic herbs, creating a fresh and luxurious experience. Complex spicy notes and white florals lead to a deep, musky base.",
+        "price": 295,
+        "size": "100ml",
+        "concentration": "Eau de Parfum",
+        "yearReleased": 2022,
+        "sillage": "Strong",
+        "longevity": "8-10 hours"
+    },
+    {
+        "id": 3,
+        "name": "Armani Stronger With You Sandalwood",
+        "image": "References/SWU Sandalwood.jpg",
+        "accords": ["Woody", "Warm Spicy", "Powdery", "Vanilla", "Balsamic", "Lavender", "Nutty", "Aromatic"],
+        "rating": "4.6/5",
+        "notes": {
+            "top": ["Saffron"],
+            "heart": ["Chestnut", "Lavender"],
+            "base": ["Sandalwood", "Vanilla", "Cedarwood"]
+        },
+        "description": "A warm and sophisticated fragrance centered around rich sandalwood and aromatic lavender. The unique combination of chestnut and vanilla creates an addictive, long-lasting scent.",
+        "price": 165,
+        "size": "100ml",
         "concentration": "Eau de Parfum",
         "yearReleased": 2023,
         "sillage": "Strong",
         "longevity": "10-12 hours"
+    },
+    {
+        "id": 4,
+        "name": "Jean Paul Gaultier Le Beau Flower Edition",
+        "image": "References/Jean Paul Gaultier.jpg",
+        "accords": ["Ozonic", "Citrus", "Aquatic", "Woody", "Musky", "Green", "Powdery", "Aromatic", "Amber"],
+        "rating": "4.4/5",
+        "notes": {
+            "top": ["Kumquat", "Lemon"],
+            "heart": ["Violet Leaf", "Geranium"],
+            "base": ["Cashmeran", "Tonka Bean", "Patchouli"]
+        },
+        "description": "A fresh and modern take on the classic Le Beau, featuring bright citrus notes and ozonic elements. The heart reveals green florals before settling into a woody, musky base.",
+        "price": 155,
+        "size": "125ml",
+        "concentration": "Eau de Toilette",
+        "yearReleased": 2024,
+        "sillage": "Moderate to Strong",
+        "longevity": "7-9 hours"
+    },
+    {
+        "id": 5,
+        "name": "YSL Y Edp",
+        "image": "References/Yves Saint Laurent.jpg",
+        "accords": ["Aromatic", "Fresh Spicy", "Woody", "Fruity", "Amber", "Fresh", "Citrus", "Herbal", "Green", "Warm Spicy"],
+        "rating": "4.8/5",
+        "notes": {
+            "top": ["Apple", "Ginger", "Bergamot"],
+            "heart": ["Sage", "Juniper Berries", "Geranium"],
+            "base": ["Amberwood", "Tonka Bean", "Cedar", "Vetiver", "Olibanum"]
+        },
+        "description": "A modern masculine fragrance that combines fresh apple and spicy ginger with aromatic herbs. The woody-ambery base provides a sophisticated and long-lasting trail.",
+        "price": 175,
+        "size": "100ml",
+        "concentration": "Eau de Parfum",
+        "yearReleased": 2023,
+        "sillage": "Strong",
+        "longevity": "10-12 hours"
+    },
+    {
+        "id": 6,
+        "name": "Giorgio Armani Acqua di Giò Profondo",
+        "image": "References/Aqua di GIO Profondo.png",
+        "accords": ["Marine", "Aromatic", "Citrus", "Fresh Spicy", "Fresh", "Woody", "Mineral", "Salty", "Lavender"],
+        "rating": "4.6/5",
+        "notes": {
+            "top": ["Sea Notes", "Aquozone", "Bergamot", "Green Mandarin"],
+            "heart": ["Rosemary", "Lavender", "Cypress", "Mastic or Lentisque"],
+            "base": ["Mineral Notes", "Musk", "Patchouli", "Amber"]
+        },
+        "description": "A deep aquatic fragrance that captures the essence of the Mediterranean sea. Fresh citrus notes blend with aromatic herbs and marine accords, finishing with a mineral-woody base.",
+        "price": 145,
+        "size": "125ml",
+        "concentration": "Eau de Parfum",
+        "yearReleased": 2020,
+        "sillage": "Moderate to Strong",
+        "longevity": "8-10 hours"
+    },
+    {
+        "id": 7,
+        "name": "Givenchy Gentleman Eau de Parfum Reserve Privée",
+        "image": "References/Givenchy Gentleman.jpg",
+        "accords": ["Woody", "Iris", "Whiskey", "Powdery", "Amber", "Violet", "Warm Spicy", "Earthy", "Nutty"],
+        "rating": "4.7/5",
+        "notes": {
+            "top": ["Bergamot"],
+            "heart": ["Iris", "Chestnut"],
+            "base": ["Whiskey", "Woodsy Notes", "Amber"]
+        },
+        "description": "A sophisticated blend of iris and whiskey notes creates a unique and luxurious signature. The combination of woodsy notes and amber provides a warm, masculine finish.",
+        "price": 185,
+        "size": "100ml",
+        "concentration": "Eau de Parfum",
+        "yearReleased": 2024,
+        "sillage": "Strong",
+        "longevity": "10-12 hours"
+    },
+    {
+        "id": 8,
+        "name": "Parfums De Marly Althaïr",
+        "image": "References/Parfums de Marly.jpg",
+        "accords": ["Sweet", "Vanilla", "Warm Spicy", "Cinnamon", "Musky", "Aromatic", "Powdery", "Citrus", "Amber", "White Floral"],
+        "rating": "4.9/5",
+        "notes": {
+            "top": ["Cinnamon", "Cardamom", "Orange Blossom", "Bergamot"],
+            "heart": ["Bourbon Vanilla", "Elemi"],
+            "base": ["Praline", "Musk", "Ambroxan", "Guaiac Wood", "Tonka", "Candied Almond"]
+        },
+        "description": "A luxurious oriental vanilla fragrance with warm spices and sweet gourmand notes. The blend of vanilla, praline, and woods creates an opulent and lasting impression.",
+        "price": 355,
+        "size": "125ml",
+        "concentration": "Eau de Parfum",
+        "yearReleased": 2024,
+        "sillage": "Very Strong",
+        "longevity": "12+ hours"
+    },
+    {
+        "id": 9,
+        "name": "Stéphane Humbert Lucas 777 Venom Incarnat",
+        "image": "References/Venom Incarnat.png",
+        "accords": ["Fruity", "Sweet", "Woody", "Vanilla", "Leather"],
+        "rating": "4.8/5",
+        "notes": {
+            "top": ["Wild Strawberry", "Strawberry", "Caramel", "Blackberry"],
+            "heart": ["Raspberry", "Virginian Cedar", "Cinnamon"],
+            "base": ["Russian Leather", "Caramel", "Vanilla", "Tonka Bean", "Patchouli", "Balsam Fir"]
+        },
+        "description": "A unique combination of sweet fruits and rich leather creates an addictive and sophisticated fragrance. The blend of berries with vanilla and woods results in an unforgettable scent.",
+        "price": 425,
+        "size": "50ml",
+        "concentration": "Extrait de Parfum",
+        "yearReleased": 2024,
+        "sillage": "Strong",
+        "longevity": "12+ hours"
     }
 ]

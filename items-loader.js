@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const container = document.getElementById('productContainer');
+    // Get the container element (works for both landing and collection pages)
+    const container = document.getElementById('productContainer') || document.getElementById('productGrid');
+    
+    if (!container) return; // Exit if no container found
 
     try {
         const response = await fetch('http://localhost:3000/api/products');
